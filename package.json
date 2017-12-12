@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "moment": "^2.19.4",
+    "proptypes": "^1.1.0",
     "react": "^16.2.0",
+    "react-datepicker": "^0.61.0",
+    "react-datetime": "^2.11.1",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17"
   },
