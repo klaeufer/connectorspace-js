@@ -18,12 +18,19 @@ class MeetupClient extends React.Component {
     this.setState({
       fromDate: date
     });
+    fetch('http://date.jsontest.com/').then(r =>
+      r.json()
+    ).then(r => {
+      console.log(r.time);
+      document.getElementById('asdf').innerHTML = r.time
+    })
   }
   render() {
-    console.log("fromDate: ", this.state.fromDate)
+    console.log("fromDate: ", this.state.fromDate.toLocaleString())
     return <div>
         <DatePicker selected={this.state.fromDate} onChange={this.handleChange} />
         <p>Picked {this.state.fromDate.toLocaleString()}</p>
+        <p id="asdf" />
       </div>
   }
 }
